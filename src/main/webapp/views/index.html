@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<td><a th:href="@{/customer/{id}/edit(id=${row.getId()})}">edit</a></td>
+<td><a th:href="@{/customer/{id}/delete(id=${row.getId()})}">delete</a></td>
+<td><a th:href="@{/customer/{id}/view(id=${row.getId()})}">view</a></td>
+</body>
+</html>
